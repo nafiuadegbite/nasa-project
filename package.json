@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/nafiuadegbite/nasa-project#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "morgan": "^1.10.0"
   }
 }
