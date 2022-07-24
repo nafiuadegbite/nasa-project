@@ -4,15 +4,13 @@ const { loadPlanetsData } = require("../../models/planets.model");
 const { mongoConnect, mongoDisconnect } = require("../../services/mongo");
 
 describe("Launches API", () => {
-  beforeAll((done) => {
-    mongoConnect();
-    loadPlanetsData();
-    done();
+  beforeAll(async () => {
+    await mongoConnect();
+    await loadPlanetsData();
   });
 
-  afterAll((done) => {
-    mongoDisconnect();
-    done();
+  afterAll(async () => {
+    await mongoDisconnect();
   });
 
   describe("Test GET /launches", () => {
